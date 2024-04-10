@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Base.astro';
+---
+
+<Layout
+	title="CV"
+	description="Singaravelan Neelakandan's Curriculum Vitae"
+	image="/cv-placeholder.jpg"
+>
+	<!-- CV Content -->
+	<section class="cv-section">
+	<h1 class="title">Personal Information</h1>
+		<ul>
+			<li>Name: Singaravelan Neelakandan M.Sc.</li>
+			<li>Date of Birth: 25/09/1995</li>
+			<li>Email: <a
+				class="cody-link"
+				href="mailto: singara41@gmail.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Email-Id"
+			>singara41@gmail.com</a></li>
+			<li>Phone: +43 681 1083 0323</li>
+			<li>Address: Brauquartier 19/1, Graz, 8055, Austria</li>
+			<!-- Add more personal information as needed -->
+		</ul>
+	</section>
+
+	<section class="cv-section">
+		<h1 class="title">Work Experience</h1>
+		<div>
+			<h2 class="sub-title">Infineon Technologies</h2>
+			<div class="flex justify-between">
+				<div class="flex-grow-1">
+					<h4>Senior Embedded Software Engineer</h4>
+				</div>
+				<div class="flex-shrink-0">
+					<span class="text-primary">March 2022 - Present</span>
+				</div>
+			</div>
+			<ul>
+				<li>Scrum Master</li>
+				<li>Responsible for in-house scheduler and contactless projects</li>
+				<!-- Add more responsibilities as needed -->
+			</ul>
+			<div class="flex justify-between">
+				<div class="flex-grow-1">
+					<h4>Signal Processing/Deep Learning Intern</h4>
+				</div>
+				<div class="flex-shrink-0">
+					<span class="text-primary">February 2020 - May 2021</span>
+				</div>
+			</div>
+			<ul>
+				<li>Enabled Edge AI for Raspberry Pi to detect gestures from Radar using signal processing. Used Neural Network quantization to reduce the model size 4x with negligible loss in accuracy.</li>
+				<!-- Add more responsibilities as needed -->
+			</ul>
+			<div class="flex justify-between">
+				<div class="flex-grow-1">
+					<h4>Formal Verification Intern</h4>
+				</div>
+				<div class="flex-shrink-0">
+					<span class="text-primary">April 2019 - September 2019</span>
+				</div>
+			</div>
+			<ul>
+				<li>Formally verified two IP block from active automotive Radar projects using OneSpin formal verification tool.</li>
+				<!-- Add more responsibilities as needed -->
+			</ul>
+		</div>
+		<div>
+			<h2 class="mt-4 sub-title">RPTU Kaiserslautern-Landau</h2>
+			<div class="flex justify-between">
+				<div class="flex-grow-1">
+					<h4>Master Thesis Student</h4>
+				</div>
+				<div class="flex-shrink-0">
+					<span class="text-primary">June 2021 - December 2021</span>
+				</div>
+			</div>
+			<p>Topic - Structural Analysis for RTL designs to enhance verification and security evaluation</p>
+			<ul>
+				<li>This tool which is written in Python, uses Verible, an open source SystemVerilog parser, formatter, and linter to analyse the SystemVerilog RTL files 
+					for register variable dependancies. This function is highly useful for finding the propagation of a confidential information within the hardware. 
+					Thereby using the analysis report in verification that can find prescence of side-channel attacks and timing attacks(Spectre/Meltdown)</li>
+			</ul>
+		</div>
+		<div>
+			<h2 class="title mt-4">German Research Center for Artificial Intelligence - DFKI</h2>
+			<div class="flex justify-between">
+				<div class="flex-grow-1">
+					<h4>Research assistant Hi-Wi</h4>
+				</div>
+				<div class="flex-shrink-0">
+					<span class="text-primary">December 2017 - January 2018</span>
+				</div>
+			</div>
+			<ul>
+				<li>High-Level Synthesis of Semi-Global Matching algorithm as an IP block using Xilinx Vivado for Augumented Reality.</li>
+			</ul>
+		</div>
+		<!-- Add more work experience as needed -->
+	</section>
+	<section class="cv-section">
+		<h1 class="title">Education</h1>
+		<div class="flex justify-between">
+			<div class="flex-grow-1">
+				<h2 class="sub-title">M.Sc. Electrical & Computer Engineering</h2>
+				<h4>RPTU Kaiserslautern-Landau</h4>
+			</div>
+			<div class="flex-shrink-0">
+				<span class="text-primary">August 2017 - December 2021</span>
+			</div>
+		</div>
+		<p class="mt-4">Embedded Systems Specialization</p>
+		<p>GPA: 1.6/5 'Gut'</p>
+		</div class="mt-4">
+		<div class="flex justify-between mt-4">
+			<div class="flex-grow-1">
+				<h2 class="sub-title">B.Eng. Electronics & Communication Engineering</h2>
+				<h4>Anna University</h4>
+			</div>
+			<div class="flex-shrink-0">
+				<span class="text-primary">August 2013 - May 2017</span>
+			</div>
+		</div>
+		<p class="mt-4">GPA: 8.6/10 'First Class with Distinction'</p>
+	</section>
+	
+
+
+
+	<section class="cv-section">
+		<h1 class="title">Skills</h1>
+		<ul>
+			<li>Embedded Programming(C, Rust)</li>
+			<li>Edge AI</li>
+			<li>Contactless, NFC stack</li>
+			<!-- Add more skills as needed -->
+		</ul>
+	</section>
+
+	<!-- Add more sections such as certifications, languages, etc. as needed -->
+
+</Layout>
