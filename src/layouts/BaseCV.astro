@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {siteConfig} from "../consts.ts";
+
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+}
+
+const {title = "", description = siteConfig.description, image = '../assets/img.png'} = Astro.props;
+
+---
+<!doctype html>
+<html lang="en" class="dark">
+    <head>
+        <BaseHead title={title} description={description} image={image} />
+        <style>
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .circle {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <Header/>
+        <main class="center">
+            <section class="cody-bg">
+                <img class="circle" src={image}/>
+                <slot/>
+            </section>
+        </main>
+        <Footer/>
+    </body>
+</html>
