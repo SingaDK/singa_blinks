@@ -3,6 +3,8 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import { siteConfig } from '../consts.ts';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 interface Props {
 	title: string;
@@ -13,9 +15,10 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, articleDate, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, articleDate, image } = Astro.props;
 const titleSeparator = "|";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 ---
 
 <!-- Global Metadata -->
