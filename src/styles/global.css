@@ -156,14 +156,7 @@
     @apply mr-2 text-accent-2;
   }
 
-  .sub-title:before {
-    content: "#";
-    @apply mr-2 text-accent-2;
-  }
 
-  .sub-title {
-    @apply text-base font-bold mb-4;
-  }
 
   .title {
     @apply text-lg font-bold mb-4;
@@ -181,38 +174,11 @@
     @apply bg-accent text-bgColor;
   }
 
-  section {
-    margin-bottom: 1rem; /* Adjust as needed */
+  .fade-in {
+    @apply transition-opacity duration-700 ease-in opacity-100 duration-700;
   }
-
-  p {
-    margin-left: 1em; /*  Add indentation to the left of <p> */
+  
+  .fade-out {
+    @apply transition-opacity duration-700 ease-in opacity-0 duration-700;
   }
-
-  li {
-      margin-left: 1em; /* Add indentation to the left of <p> */
-  }
-
-
-  h1 {
-    color: hsl(var(--theme-accent));
-    font-size: 30pt;
-  }
-
-  h4 {
-    text-align: start;
-    color: hsl(var(--accent));
-    margin-left: 1rem;
-    font-size: 10pt;
-  }
-
-  h2 {
-    text-align: start;
-    
-  }
-
-  a {
-    color: hsl(var(--green));
-  }
-
 }

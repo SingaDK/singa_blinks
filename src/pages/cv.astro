@@ -1,12 +1,72 @@
 ---
 import Layout from '../layouts/BaseCV.astro';
+import myImportedImage from '../assets/closeup.jpg';
+import { Image } from 'astro:assets';
 ---
 
 <Layout
 	title="CV"
 	description="Singaravelan Neelakandan's Curriculum Vitae"
 >
+<style>
+	.center {
+		display: flex;
+		justify-content: right;
+		align-items: right;
+		height: 0vh;
+	}
+	.circle {
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+	}
+	.sub-title:before {
+    content: "#";
+    @apply mr-2 text-accent-2;
+  	}
+
+  .sub-title {
+    @apply text-base font-bold mb-4;
+  	}
+	section {
+    margin-bottom: 1rem; /* Adjust as needed */
+	}
+
+	p {
+		margin-left: 1em; /*  Add indentation to the left of <p> */
+	}
+
+	li {
+		margin-left: 1.5em; /* Add indentation to the left of <p> */
+		text-align: justify;
+	}
+
+
+	h1 {
+		color: hsl(var(--theme-accent));
+		font-size: 20pt;
+	}
+
+	h4 {
+		text-align: start;
+		color: hsl(var(--accent));
+		margin-left: 1rem;
+		font-size: 10pt;
+	}
+
+	h2 {
+		text-align: start;
+		
+	}
+
+	a {
+		color: hsl(var(--green));
+	}
+	</style>
 	<!-- CV Content -->
+	<main class="center">
+		<Image class="circle" src={myImportedImage} alt="descriptive text" />
+	</main>
 	<section class="cv-section">
 	<h1 class="title">Personal Information</h1>
 		<ul>
@@ -42,7 +102,7 @@ import Layout from '../layouts/BaseCV.astro';
 				<li>Responsible for in-house scheduler and contactless projects</li>
 				<!-- Add more responsibilities as needed -->
 			</ul>
-			<div class="flex justify-between">
+			<div class="flex justify-between mt-4">
 				<div class="flex-grow-1">
 					<h4>Signal Processing/Deep Learning Intern</h4>
 				</div>
@@ -54,7 +114,7 @@ import Layout from '../layouts/BaseCV.astro';
 				<li>Enabled Edge AI for Raspberry Pi to detect gestures from Radar using signal processing. Used Neural Network quantization to reduce the model size 4x with negligible loss in accuracy.</li>
 				<!-- Add more responsibilities as needed -->
 			</ul>
-			<div class="flex justify-between">
+			<div class="flex justify-between mt-4">
 				<div class="flex-grow-1">
 					<h4>Formal Verification Intern</h4>
 				</div>
@@ -131,7 +191,7 @@ import Layout from '../layouts/BaseCV.astro';
 
 	<section class="cv-section">
 		<h1 class="title">Skills</h1>
-		<ul>
+		<ul class="list-inside list-disc">
 			<li>Embedded Programming(C, Rust)</li>
 			<li>Edge AI</li>
 			<li>Contactless, NFC stack</li>
